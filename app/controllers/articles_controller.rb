@@ -9,6 +9,9 @@ class ArticlesController < ApplicationController
 	
 	def show
 		@article = Article.find params[:id]
+		#why is this not in new?
+		@comment = Comment.new
+		@comment.article_id = @article.id
 	end
 
 	def new

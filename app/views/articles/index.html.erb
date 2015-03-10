@@ -1,0 +1,16 @@
+<!-- view file for articles
+    ERB is the weird html syntax with %
+    if '< %'  then no result from ruby
+    if '< %=' then result from ruby included
+-->
+<h1>All Articles</h1>
+
+<ul id="articles">
+    <% @articles.each do |article| %>
+        <li>                                               <!-- this adds CSS class to link-->
+            <%= link_to article.title, article_path(article), class: 'article_title' %>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "Create a New Article", new_article_path, class: "new_article" %>

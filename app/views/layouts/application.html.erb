@@ -9,7 +9,8 @@
 <body>
 
 <p class="flash"><%= flash.notice %></p>
-<!-- yield is where view template contect is injected-->
+<!-- each view template gets inserted at the yield. This makes it easy to add
+	site wide elements like sidebars or headers/footers -->
 <%= yield %>
 
 </body>
